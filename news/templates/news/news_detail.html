@@ -1,0 +1,10 @@
+{% extends 'news/home.html' %}
+
+{% block content %}
+<main class="container my-4">
+    <h2>{{ news.title }}</h2>
+    <img src="{{ news.image }}" class="img-fluid" alt="News Image">
+    <p>{{ news.description }}</p>
+    <a href="{% url 'news_detail' news.id %}" class="btn btn-primary mt-auto">Read More</a>
+</main>
+{% endblock %}

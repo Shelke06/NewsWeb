@@ -1,0 +1,21 @@
+{% extends 'news/home.html' %}
+
+{% block content %}
+<main class="container my-4">
+    <h2 class="text-center text-warning">Share Market News</h2>
+    <div class="row">
+        {% for news in share_market_news_list %}
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card h-100">
+                <img src="{{ news.image }}" class="card-img-top" alt="News Image">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{ news.title }}</h5>
+                    <p class="card-text">{{ news.description }}</p>
+                    <a href="#" class="btn btn-primary mt-auto">Read More</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}
